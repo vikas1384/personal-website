@@ -1,5 +1,6 @@
 
 import { ArrowDown } from "lucide-react";
+import ProfileCarousel from "./ProfileCarousel";
 
 const Hero = () => {
   return (
@@ -36,16 +37,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center animate-scale-up">
-            <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-background shadow-xl">
-                <img
-                  src="/lovable-uploads/89b40197-aedd-4e39-b16f-041336c94138.png"
-                  alt="Vikas Vishwakarma"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute inset-0 rounded-full shadow-[0_0_30px_10px_rgba(var(--primary-rgb),0.1)] -z-10"></div>
-            </div>
+            <ProfileCarousel />
           </div>
         </div>
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
