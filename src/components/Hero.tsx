@@ -39,7 +39,7 @@ const Hero = () => {
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
-                className="bg-accent text-accent-foreground hover:bg-accent/80 px-6 py-3"
+                className="border-primary text-primary hover:bg-primary/10 px-6 py-3"
               >
                 Contact Me
               </Button>

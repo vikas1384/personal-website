@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,6 +56,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <ThemeToggle />
           <a
             href="#contact"
             className="text-sm font-medium bg-primary text-primary-foreground px-4 py-2 rounded-md inline-flex items-center hover:bg-primary/90 transition-colors"
@@ -64,16 +66,19 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <div className="space-y-1.5">
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
-          </div>
-        </button>
+        <div className="flex items-center space-x-2 md:hidden">
+          <ThemeToggle />
+          <button
+            className="p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <div className="space-y-1.5">
+              <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
+              <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+            </div>
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
