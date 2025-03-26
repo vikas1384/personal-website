@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "./ui/button";
 
 const profileImages = [
   "/lovable-uploads/d5f04c7b-3b87-477d-a0c7-bf23e45950a3.png",
@@ -47,19 +47,23 @@ const ProfileCarousel = () => {
       </div>
       
       {/* Navigation buttons */}
-      <button 
+      <Button 
         onClick={goToPrevious}
+        size="icon"
+        variant="ghost"
         className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-background/80 backdrop-blur-sm p-1 rounded-full text-primary hover:bg-background/90 transition-colors z-10"
       >
         <ChevronLeft className="h-5 w-5" />
-      </button>
+      </Button>
       
-      <button 
+      <Button 
         onClick={goToNext}
+        size="icon"
+        variant="ghost"
         className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-background/80 backdrop-blur-sm p-1 rounded-full text-primary hover:bg-background/90 transition-colors z-10"
       >
         <ChevronRight className="h-5 w-5" />
-      </button>
+      </Button>
       
       {/* Indicator dots */}
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">

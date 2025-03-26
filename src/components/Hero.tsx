@@ -1,8 +1,16 @@
 
 import { ArrowDown } from "lucide-react";
 import ProfileCarousel from "./ProfileCarousel";
+import { Button } from "./ui/button";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -22,18 +30,19 @@ const Hero = () => {
               A passionate engineer and developer based in Bangalore, India with a keen interest in technology, entrepreneurship, and innovation.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#projects"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
+              <Button
+                onClick={() => scrollToSection("projects")}
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3"
               >
                 View Projects
-              </a>
-              <a
-                href="#contact"
-                className="bg-accent text-accent-foreground hover:bg-accent/80 px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center"
+              </Button>
+              <Button
+                onClick={() => scrollToSection("contact")}
+                variant="outline"
+                className="bg-accent text-accent-foreground hover:bg-accent/80 px-6 py-3"
               >
                 Contact Me
-              </a>
+              </Button>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center animate-scale-up">
@@ -41,9 +50,14 @@ const Hero = () => {
           </div>
         </div>
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <a href="#about" className="rounded-full bg-card/80 backdrop-blur-sm p-2 shadow-lg">
+          <Button 
+            variant="ghost" 
+            size="icon"
+            onClick={() => scrollToSection("about")}
+            className="rounded-full bg-card/80 backdrop-blur-sm p-2 shadow-lg"
+          >
             <ArrowDown className="w-6 h-6 text-muted-foreground" />
-          </a>
+          </Button>
         </div>
       </div>
     </section>

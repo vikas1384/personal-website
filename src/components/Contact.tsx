@@ -1,8 +1,12 @@
 
 import { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Button } from "./ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,14 +20,34 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you'd handle the form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
-    // Show success message
-    alert("Thank you for your message! I'll get back to you soon.");
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call with a timeout
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      console.log("Form submitted:", formData);
+      
+      // Show success message
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your message! I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Failed",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -102,6 +126,7 @@ const Contact = () => {
                     className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30 bg-background"
                     placeholder="Your name"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -118,6 +143,7 @@ const Contact = () => {
                     className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30 bg-background"
                     placeholder="Your email"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -134,15 +160,18 @@ const Contact = () => {
                     className="w-full px-4 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/30 bg-background"
                     placeholder="Your message"
                     required
+                    disabled={isSubmitting}
                   ></textarea>
                 </div>
 
-                <button
+                <Button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center justify-center"
+                  className="w-full"
+                  disabled={isSubmitting}
                 >
-                  Send Message <Send className="ml-2 h-4 w-4" />
-                </button>
+                  {isSubmitting ? "Sending..." : "Send Message"} 
+                  {!isSubmitting && <Send className="ml-2 h-4 w-4" />}
+                </Button>
               </div>
             </form>
           </div>
