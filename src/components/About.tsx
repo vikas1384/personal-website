@@ -1,5 +1,5 @@
 
-import { ArrowRight, Mail, User, Award, MapPin, Phone, Briefcase } from "lucide-react";
+import { ArrowRight, Mail, User, Award, MapPin, Phone, Briefcase, Lightbulb } from "lucide-react";
 
 const About = () => {
   return (
@@ -11,11 +11,11 @@ const About = () => {
             <p className="text-lg">
               I'm an Electronics and Communication Engineering student at Sir M. Visvesvaraya Institute of Technology, Bangalore, with a strong CGPA of 8.4. My academic journey has equipped me with technical skills in embedded systems, digital electronics, communication networks, and programming.
             </p>
-            <p className="text-lg">
-              I'm passionate about building innovative solutions, from responsive web applications to e-commerce platforms and business analytics dashboards. I have experience in web development, product marketing, and entrepreneurship.
+            <p className="text-lg font-medium text-primary">
+              With an entrepreneurial mindset, I'm passionate about building innovative solutions and scaling businesses through technology. My experience in product management and marketing has given me valuable insights into creating user-centric products that solve real-world problems.
             </p>
             <p className="text-lg">
-              When I'm not coding or working on projects, I enjoy sports (especially cricket, tennis, and badminton), photography, and exploring new technologies. I've participated in entrepreneurship events and volunteered at cultural festivals, reflecting my interest in community engagement and business innovation.
+              When I'm not coding or working on business ideas, I enjoy sports (especially cricket, tennis, and badminton), photography, and exploring new technologies. I've participated in entrepreneurship events and volunteered at cultural festivals, reflecting my interest in community engagement and business innovation.
             </p>
             
             <div className="mt-8 grid sm:grid-cols-2 gap-6">
@@ -48,15 +48,15 @@ const About = () => {
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-2"></span>
+                    <span className="text-muted-foreground">Selected for Wadhwani LiftOff entrepreneurship cohort</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-2"></span>
                     <span className="text-muted-foreground">Runner-up in State-Level Cricket Tournament</span>
                   </li>
                   <li className="flex items-start">
                     <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-2"></span>
                     <span className="text-muted-foreground">Winner of college photography competitions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-primary rounded-full mt-1.5 mr-2"></span>
-                    <span className="text-muted-foreground">Selected for Wadhwani LiftOff cohort</span>
                   </li>
                 </ul>
               </div>
@@ -64,11 +64,11 @@ const About = () => {
             
             <div className="mt-4">
               <h3 className="font-semibold mb-3 flex items-center">
-                <Briefcase className="mr-2 h-5 w-5 text-primary" />
-                Interests
+                <Lightbulb className="mr-2 h-5 w-5 text-primary" />
+                Entrepreneurial Interests
               </h3>
               <div className="flex flex-wrap">
-                {["Artificial Intelligence", "Tech Trends", "Entrepreneurship", "Business Strategy", "Reading", "Photography", "Traveling"].map((interest) => (
+                {["Startup Development", "Business Strategy", "Product Innovation", "Growth Hacking", "Tech Entrepreneurship", "Digital Marketing", "Market Research", "Venture Development"].map((interest) => (
                   <span key={interest} className="chip">
                     {interest}
                   </span>

@@ -1,5 +1,5 @@
 
-import { Code, Database, FileText, Image, Laptop, Users, Globe, ArrowUpRight } from "lucide-react";
+import { Code, Database, FileText, Image, Laptop, Users, Globe, ArrowUpRight, TrendingUp, Lightbulb } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
@@ -9,9 +9,9 @@ const Skills = () => {
       skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "React.js", "Python (Flask, Django)", "MySQL", "Firebase", "Git", "GitHub", "AWS", "Netlify"],
     },
     {
-      title: "Data & Business Analytics",
-      icon: <Database className="h-6 w-6 text-primary" />,
-      skills: ["Data Visualization", "Python (Matplotlib, Seaborn, Dash)", "Tableau", "Power BI", "Advanced Excel", "Google Sheets"],
+      title: "Entrepreneurship & Business",
+      icon: <TrendingUp className="h-6 w-6 text-primary" />,
+      skills: ["Business Planning", "Market Research", "Growth Strategy", "Lean Startup", "Product-Market Fit", "Revenue Modeling", "Pitch Development", "Startup Management"],
     },
     {
       title: "Digital Marketing & Product",
@@ -19,16 +19,16 @@ const Skills = () => {
       skills: ["SEO", "Website Optimization", "Social Media Branding", "Content Strategy", "Instagram & LinkedIn Marketing", "Market Research", "Competitive Analysis"],
     },
     {
-      title: "Soft Skills & Leadership",
-      icon: <Users className="h-6 w-6 text-primary" />,
-      skills: ["Public Speaking", "Team Leadership", "Problem-Solving", "Analytical Thinking", "Entrepreneurial Mindset"],
+      title: "Data & Business Analytics",
+      icon: <Database className="h-6 w-6 text-primary" />,
+      skills: ["Data Visualization", "Python (Matplotlib, Seaborn)", "Tableau", "Power BI", "Advanced Excel", "Google Sheets", "KPI Tracking"],
     }
   ];
 
   return (
     <section id="skills">
       <div className="section-container">
-        <h2 className="section-title">Skills</h2>
+        <h2 className="section-title">Skills & Expertise</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div 
@@ -61,9 +61,9 @@ const Skills = () => {
                 description: "Strong foundation in web development, Python programming, and data analytics."
               },
               { 
-                title: "Problem Solving", 
-                icon: <Database className="h-10 w-10 text-primary mb-4" />,
-                description: "Analytical approach to finding innovative solutions for complex challenges."
+                title: "Entrepreneurial Vision", 
+                icon: <Lightbulb className="h-10 w-10 text-primary mb-4" />,
+                description: "Ability to identify business opportunities and develop innovative solutions."
               },
               { 
                 title: "Leadership", 
@@ -71,9 +71,9 @@ const Skills = () => {
                 description: "Experience in team leadership, project management, and effective communication."
               },
               { 
-                title: "Creative Eye", 
-                icon: <Image className="h-10 w-10 text-primary mb-4" />,
-                description: "Award-winning photography skills and design sensibility."
+                title: "Business Strategy", 
+                icon: <TrendingUp className="h-10 w-10 text-primary mb-4" />,
+                description: "Data-driven approach to growth, marketing, and market positioning."
               }
             ].map((strength, index) => (
               <div 
