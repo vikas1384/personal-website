@@ -11,7 +11,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider defaultTheme="system" storageKey="vikas-portfolio-theme">
+  <ThemeProvider defaultTheme="light" storageKey="vikas-portfolio-theme">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
