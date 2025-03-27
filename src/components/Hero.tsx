@@ -23,12 +23,9 @@ const Hero = () => {
             <div className="inline-block bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               Electronics Engineer & Tech Entrepreneur
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter mb-2">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter mb-4">
               Hi, I'm <span className="text-primary">Vikas Vishwakarma</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/80 italic mb-4">
-              A Sportsman, leader and a passionate entrepreneur
-            </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8">
               A passionate engineer, entrepreneur, and developer with expertise in web development, product management, and digital marketing. Building innovative solutions while pursuing BE in Electronics and Communication Engineering.
             </p>

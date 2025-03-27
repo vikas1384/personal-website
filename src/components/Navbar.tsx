@@ -38,12 +38,17 @@ const Navbar = () => {
       }`}
     >
       <div className="section-container py-0 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tighter hover:text-primary transition-colors"
-        >
-          Vikas<span className="text-primary">.</span>
-        </a>
+        <div className="flex flex-col">
+          <a
+            href="#"
+            className="text-xl font-bold tracking-tighter hover:text-primary transition-colors"
+          >
+            Vikas<span className="text-primary">.</span>
+          </a>
+          <span className="text-xs text-muted-foreground hidden md:block">
+            A Sportsman, leader and a passionate entrepreneur
+          </span>
+        </div>
 
         {/* Desktop menu */}
         <nav className="hidden md:flex items-center space-x-6">
@@ -88,6 +93,14 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
+          <div className="mb-4 text-center">
+            <div className="text-xl font-bold mb-1">
+              Vikas<span className="text-primary">.</span>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              A Sportsman, leader and a passionate entrepreneur
+            </div>
+          </div>
           {navLinks.map((link) => (
             <a
               key={link.name}
