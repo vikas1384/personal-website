@@ -1,5 +1,5 @@
 
-import { Book } from "lucide-react";
+import { Book, Award, Medal, Trophy } from "lucide-react";
 
 const Education = () => {
   const education = [
@@ -8,14 +8,24 @@ const Education = () => {
       degree: "Bachelors of Engineering in Electronics and Communication Engg.",
       period: "2021 - 2025",
       location: "Bangalore, India",
-      details: "CGPA: 7.1",
+      details: "CGPA: 8.4",
+      coursework: [
+        "Embedded Systems & Microcontrollers: Hands-on experience with Arduino, Raspberry Pi, and 8051 Microcontrollers.",
+        "Digital Electronics & Signal Processing: Understanding of logic design, VHDL, MATLAB applications.",
+        "Communication Networks: Strong foundation in networking protocols, IoT & wireless communication.",
+        "Python Programming & AI Concepts: Practical exposure to machine learning basics, data analysis, and automation."
+      ]
     },
     {
       institution: "Modern Academy Senior Secondary School",
-      degree: "Senior Secondary (12th) - Science",
+      degree: "Senior Secondary (12th) - Science (Physics, Chemistry, Mathematics)",
       period: "2019 - 2020",
       location: "",
       details: "Percentage: 69%",
+      coursework: [
+        "Developed a keen interest in engineering problem-solving and practical applications.",
+        "Active in extracurricular activities, including leadership roles in academic clubs."
+      ]
     },
     {
       institution: "Modern Academy Senior Secondary School",
@@ -23,25 +33,43 @@ const Education = () => {
       period: "2018",
       location: "",
       details: "Percentage: 85%",
+      coursework: [
+        "Strong foundation in Mathematics, Science, and Computer Applications.",
+        "Engaged in science fairs, sports events, and leadership programs."
+      ]
     },
   ];
 
   const certificates = [
     {
-      title: "Sports Excellence",
-      details: "Recognized for outstanding performance and active participation in school and college sports.",
+      title: "Sports Excellence Award",
+      details: "Recognized for outstanding performance in cricket, tennis, and badminton.",
+      icon: <Trophy className="h-6 w-6 text-primary" />
     },
     {
-      title: "VTU Sports Awards",
-      details: "Runner-up in State-Level Cricket Tournament; recognized for exceptional performance and active participation in sports throughout school and college.",
+      title: "Microsoft Excel & Word Certification",
+      details: "Proficiency in data analytics, document management, and reporting.",
+      icon: <Award className="h-6 w-6 text-primary" />
     },
     {
-      title: "Photography Excellence",
-      details: "College-Level Awards for Photography & Winner of Photography Competition hosted by Eco Club - Nisarga.",
+      title: "Business Management Certification",
+      details: "Understanding of corporate strategies, finance, and growth hacking.",
+      icon: <Award className="h-6 w-6 text-primary" />
     },
     {
-      title: "Entrepreneurship & Cultural Fest Volunteering",
-      details: "Represented college in various entrepreneurship events and volunteered at Kalangali Cultural Fest, SIRMVIT & Also We're part of the prestigious Wadhwani LiftOff cohort.",
+      title: "HTML, CSS, JavaScript Certification",
+      details: "Expertise in web development & UI/UX design.",
+      icon: <Award className="h-6 w-6 text-primary" />
+    },
+    {
+      title: "Sales & Marketing Certification",
+      details: "Deep knowledge of customer engagement & digital marketing.",
+      icon: <Award className="h-6 w-6 text-primary" />
+    },
+    {
+      title: "Team Leadership & Communication Certification",
+      details: "Experience in managing teams and leading projects.",
+      icon: <Award className="h-6 w-6 text-primary" />
     },
   ];
 
@@ -77,6 +105,15 @@ const Education = () => {
                       <p className="text-muted-foreground">
                         {edu.details} {edu.location && `• ${edu.location}`}
                       </p>
+                      {edu.coursework && (
+                        <div className="mt-3 space-y-2">
+                          {edu.coursework.map((course, idx) => (
+                            <p key={idx} className="text-sm text-muted-foreground">
+                              • {course}
+                            </p>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -85,7 +122,7 @@ const Education = () => {
           </div>
 
           <div>
-            <h2 className="section-title">Certificates</h2>
+            <h2 className="section-title">Certifications</h2>
             <div className="space-y-6 mt-8">
               {certificates.map((cert, index) => (
                 <div
@@ -93,7 +130,10 @@ const Education = () => {
                   className="bg-card p-6 rounded-lg shadow-sm animate-fade-in card-hover"
                   style={{ animationDelay: `${200 + index * 100}ms` }}
                 >
-                  <h3 className="text-xl font-semibold mb-2">{cert.title}</h3>
+                  <div className="flex items-center mb-2">
+                    {cert.icon}
+                    <h3 className="text-xl font-semibold ml-3">{cert.title}</h3>
+                  </div>
                   <p className="text-muted-foreground">{cert.details}</p>
                 </div>
               ))}

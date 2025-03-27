@@ -1,22 +1,27 @@
 
-import { Code, Database, FileText, Image, Laptop } from "lucide-react";
+import { Code, Database, FileText, Image, Laptop, Users, Globe, ArrowUpRight } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Technical Skills",
+      title: "Programming & Development",
       icon: <Code className="h-6 w-6 text-primary" />,
-      skills: ["HTML", "CSS", "Python"],
+      skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "React.js", "Python (Flask, Django)", "MySQL", "Firebase", "Git", "GitHub", "AWS", "Netlify"],
     },
     {
-      title: "Business Skills",
-      icon: <FileText className="h-6 w-6 text-primary" />,
-      skills: ["Microsoft Word", "Microsoft Excel", "Business Management", "Team Leadership", "Sales and Marketing"],
+      title: "Data & Business Analytics",
+      icon: <Database className="h-6 w-6 text-primary" />,
+      skills: ["Data Visualization", "Python (Matplotlib, Seaborn, Dash)", "Tableau", "Power BI", "Advanced Excel", "Google Sheets"],
     },
     {
-      title: "Other Skills",
-      icon: <Laptop className="h-6 w-6 text-primary" />,
-      skills: ["Photography", "Sports", "Entrepreneurship"],
+      title: "Digital Marketing & Product",
+      icon: <Globe className="h-6 w-6 text-primary" />,
+      skills: ["SEO", "Website Optimization", "Social Media Branding", "Content Strategy", "Instagram & LinkedIn Marketing", "Market Research", "Competitive Analysis"],
+    },
+    {
+      title: "Soft Skills & Leadership",
+      icon: <Users className="h-6 w-6 text-primary" />,
+      skills: ["Public Speaking", "Team Leadership", "Problem-Solving", "Analytical Thinking", "Entrepreneurial Mindset"],
     }
   ];
 
@@ -24,11 +29,11 @@ const Skills = () => {
     <section id="skills">
       <div className="section-container">
         <h2 className="section-title">Skills</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-lg p-6 shadow-sm card-hover"
+              className="bg-card rounded-lg p-6 shadow-sm card-hover animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center mb-4">
@@ -51,19 +56,19 @@ const Skills = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
+                title: "Technical Expertise", 
+                icon: <Code className="h-10 w-10 text-primary mb-4" />,
+                description: "Strong foundation in web development, Python programming, and data analytics."
+              },
+              { 
                 title: "Problem Solving", 
                 icon: <Database className="h-10 w-10 text-primary mb-4" />,
                 description: "Analytical approach to finding innovative solutions for complex challenges."
               },
               { 
-                title: "Technical Skills", 
-                icon: <Code className="h-10 w-10 text-primary mb-4" />,
-                description: "Strong foundation in web development and programming fundamentals."
-              },
-              { 
-                title: "Entrepreneurship", 
-                icon: <Laptop className="h-10 w-10 text-primary mb-4" />,
-                description: "Experience in creating business solutions and entrepreneurial initiatives."
+                title: "Leadership", 
+                icon: <Users className="h-10 w-10 text-primary mb-4" />,
+                description: "Experience in team leadership, project management, and effective communication."
               },
               { 
                 title: "Creative Eye", 

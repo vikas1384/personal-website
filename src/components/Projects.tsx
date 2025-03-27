@@ -5,23 +5,23 @@ const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio Website",
-      description: "A sleek and responsive portfolio website showcasing skills, projects, and resume. Built with modern web technologies for optimal user experience.",
+      description: "Designed a fully responsive and interactive portfolio website with resume download, project showcase, and contact form integration.",
       icon: <Code className="h-8 w-8 text-primary" />,
-      tags: ["HTML", "CSS", "Python"],
+      tags: ["HTML", "CSS", "JavaScript", "Flask"],
       link: "#",
     },
     {
-      title: "E-Commerce Website",
-      description: "A simple e-commerce website with product listings, shopping cart, and checkout functionality. Includes payment gateway integration.",
+      title: "E-Commerce Website with Payment Gateway",
+      description: "Developed an online store with secure PayPal payment integration, interactive shopping cart system with order tracking & analytics.",
       icon: <ShoppingCart className="h-8 w-8 text-primary" />,
-      tags: ["HTML", "CSS", "Python", "Entrepreneurship"],
+      tags: ["Python", "Flask", "HTML", "CSS", "PayPal API"],
       link: "#",
     },
     {
       title: "Business Analytics Dashboard",
-      description: "A dashboard to track business metrics like sales, customer engagement, and more. Uses Python libraries to display data analytics.",
+      description: "Developed a dashboard to analyze business KPIs and sales trends, providing interactive data visualization to help businesses make informed decisions.",
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      tags: ["Python", "Entrepreneurship"],
+      tags: ["Python", "Dash", "Streamlit", "Data Visualization"],
       link: "#",
     },
   ];

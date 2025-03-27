@@ -27,7 +27,7 @@ const Hero = () => {
               Hi, I'm <span className="text-primary">Vikas Vishwakarma</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8">
-              A passionate engineer and developer based in Bangalore, India with a keen interest in technology, entrepreneurship, and innovation.
+              A passionate engineer and developer with expertise in web development, data analytics, and digital marketing. Currently pursuing a BE in Electronics and Communication Engineering with a CGPA of 8.4.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
