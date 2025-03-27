@@ -1,69 +1,70 @@
-# Welcome to your Lovable project
+# Welcome to your Personal Website
 
-## Project info
+This is a [Vite](https://vitejs.dev) project using React and TypeScript.
 
-**URL**: https://lovable.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69
+**URL**: https://vikas.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69
 
-## How can I edit this code?
+## Development
 
-There are several ways of editing your application.
+### Option 1
+**Use VIKAS**
 
-**Use Lovable**
+Simply visit the [Personal Website](https://vikas.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69) and start prompting.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69) and start prompting.
+Changes made via VIKAS will be committed automatically to this repo.
 
-Changes made via Lovable will be committed automatically to this repo.
+### Option 2
+**Use your own IDE**
 
-**Use your preferred IDE**
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in VIKAS.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Install Node.js
+2. Install Git
 
-Follow these steps:
+#### Steps
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repo
+```bash
+git clone <repo-url>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies
+```bash
+cd <repo-name>
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and visit `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Building
 
-**Use GitHub Codespaces**
+To create a production build:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with .
+### Option 1
+**Use VIKAS**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Simply open [VIKAS](https://vikas.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69) and click on Share -> Publish.
 
-## How can I deploy this project?
+### Option 2
+**Use your own hosting**
 
-Simply open [Lovable](https://lovable.dev/projects/b2d398b7-18ca-4c52-ad39-d3d8949bce69) and click on Share -> Publish.
+You can deploy this website anywhere that supports static websites.
 
-## I want to use a custom domain - is that possible?
+For more details: [Custom domains](https://docs.vikas.dev/tips-tricks/custom-domain/)
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## License
+
+MIT

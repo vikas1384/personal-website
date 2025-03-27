@@ -1,15 +1,14 @@
-
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
-const profileImages = [
-  "/lovable-uploads/d5f04c7b-3b87-477d-a0c7-bf23e45950a3.png",
-  "/lovable-uploads/28217641-f87f-4234-b3d0-aa522b1e87af.png",
-  "/lovable-uploads/0c33057c-5e48-439e-b78b-f490aefbb4ef.png",
-  "/lovable-uploads/9e278e7f-cdeb-4b36-8dc4-c44dcbc81302.png",
-  "/lovable-uploads/ca87947b-f206-44d5-81e5-1b447b9b3d97.png",
-  "/lovable-uploads/036e1116-495f-4a4a-9d4b-5792cf3ab603.png",
+const images = [
+  "/uploads/d5f04c7b-3b87-477d-a0c7-bf23e45950a3.png",
+  "/uploads/28217641-f87f-4234-b3d0-aa522b1e87af.png",
+  "/uploads/0c33057c-5e48-439e-b78b-f490aefbb4ef.png",
+  "/uploads/9e278e7f-cdeb-4b36-8dc4-c44dcbc81302.png",
+  "/uploads/ca87947b-f206-44d5-81e5-1b447b9b3d97.png",
+  "/uploads/036e1116-495f-4a4a-9d4b-5792cf3ab603.png",
 ];
 
 const ProfileCarousel = () => {
@@ -18,18 +17,18 @@ const ProfileCarousel = () => {
   // Auto-rotate images every 5 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % profileImages.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? profileImages.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % profileImages.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   const goToIndex = (index: number) => {
@@ -40,7 +39,7 @@ const ProfileCarousel = () => {
     <div className="relative w-64 h-64 sm:w-80 sm:h-80">
       <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-background shadow-xl">
         <img
-          src={profileImages[currentIndex]}
+          src={images[currentIndex]}
           alt="Vikas Vishwakarma"
           className="w-full h-full object-cover transition-opacity duration-500"
         />
@@ -67,7 +66,7 @@ const ProfileCarousel = () => {
       
       {/* Indicator dots */}
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5">
-        {profileImages.map((_, index) => (
+        {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToIndex(index)}
