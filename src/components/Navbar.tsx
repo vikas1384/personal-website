@@ -46,7 +46,7 @@ const Navbar = () => {
             Vikas<span className="text-primary">.</span>
           </a>
           <span className="text-xs text-muted-foreground hidden md:block">
-            A Sportsman, leader and a passionate entrepreneur
+            A Sportsman, a leader and a passionate passionate entrepreneur
           </span>
         </div>
 
@@ -98,7 +98,7 @@ const Navbar = () => {
               Vikas<span className="text-primary">.</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              A Sportsman, leader and a passionate entrepreneur
+              A Sportsman, a leader and a passionate passionate entrepreneur
             </div>
           </div>
           {navLinks.map((link) => (
