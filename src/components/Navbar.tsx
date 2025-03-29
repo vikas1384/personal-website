@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
@@ -18,6 +18,11 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close mobile menu when clicking on a link that navigates to a section
+  const handleNavLinkClick = () => {
+    setMobileMenuOpen(false);
+  };
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -75,6 +80,7 @@ const Navbar = () => {
           <button
             className="p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             <div className="space-y-1.5">
               <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
@@ -92,6 +98,15 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
+          {/* Close button for mobile menu */}
+          <button 
+            className="absolute right-4 top-4 p-2 text-foreground hover:text-primary"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          
           <div className="mb-4 text-center">
             <div className="text-xl font-bold mb-1">
               Vikas<span className="text-primary">.</span>
@@ -105,7 +120,7 @@ const Navbar = () => {
               key={link.name}
               href={link.href}
               className="text-lg font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={handleNavLinkClick}
             >
               {link.name}
             </a>
@@ -113,7 +128,7 @@ const Navbar = () => {
           <a
             href="#contact"
             className="text-lg font-medium bg-primary text-primary-foreground px-6 py-3 rounded-md inline-flex items-center hover:bg-primary/90 transition-colors"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={handleNavLinkClick}
           >
             Let's Talk <ArrowRight className="ml-2 h-5 w-5" />
           </a>
