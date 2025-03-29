@@ -6,12 +6,12 @@ const Skills = () => {
     {
       title: "Programming & Development",
       icon: <Code className="h-6 w-6 text-primary" />,
-      skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "React.js", "Python (Flask, Django)", "MySQL", "Firebase", "Git", "GitHub", "AWS", "Netlify", "AI"],
+      skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "React.js", "Python (Flask, Django)", "MySQL", "Firebase", "Git", "GitHub", "AWS", "Netlify"],
     },
     {
       title: "Entrepreneurship & Business",
       icon: <TrendingUp className="h-6 w-6 text-primary" />,
-      skills: ["Business Planning", "Market Research", "Growth Strategy", "Lean Startup", "Product-Market Fit", "Revenue Modeling", "Pitch Development", "Startup Management", "Startup"],
+      skills: ["Business Planning", "Market Research", "Growth Strategy", "Lean Startup", "Product-Market Fit", "Revenue Modeling", "Pitch Development", "Startup Management"],
     },
     {
       title: "Digital Marketing & Product",
