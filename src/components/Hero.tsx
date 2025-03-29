@@ -21,27 +21,27 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1 animate-fade-in">
             <div className="inline-block bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              Electronics Engineer & Tech Entrepreneur
+              Tech Entrepreneur & AI Venture Builder
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter mb-4">
               Hi, I'm <span className="text-primary">Vikas Vishwakarma</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-8">
-              A passionate engineer, entrepreneur, and developer with expertise in web development, product management, and digital marketing. Building innovative solutions while pursuing BE in Electronics and Communication Engineering.
+              A visionary entrepreneur building AI-powered startups that transform industries. Combining technical expertise in artificial intelligence with business acumen to create innovative solutions while pursuing BE in Electronics and Communication Engineering.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
                 onClick={() => scrollToSection("projects")}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3"
               >
-                View Projects
+                View Ventures
               </Button>
               <Button
                 onClick={() => scrollToSection("contact")}
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary/10 px-6 py-3"
               >
-                Contact Me
+                Partner With Me
               </Button>
             </div>
           </div>

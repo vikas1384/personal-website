@@ -1,59 +1,59 @@
 
-import { Code, Tag, User, Briefcase, TrendingUp, Lightbulb } from "lucide-react";
+import { Code, Tag, User, Briefcase, TrendingUp, Lightbulb, Zap, Brain } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      role: "Product Manager & Entrepreneur",
-      company: "Neon Visuals",
-      period: "2022",
-      description: "Led product development and built a team to develop and market digital solutions.",
+      role: "Founder & AI Product Strategist",
+      company: "Neon Visuals AI",
+      period: "2022 - Present",
+      description: "Founded an AI-driven startup focused on visual content creation and automated marketing solutions.",
       icon: <TrendingUp className="h-10 w-10 text-primary p-2 bg-accent rounded-full" />,
       responsibilities: [
-        "Launched a tech product from concept to market, following lean startup methodology.",
-        "Led product development efforts, collaborating with designers, developers, and business teams.",
-        "Defined growth strategies for scaling user acquisition & engagement.",
-        "Managed the end-to-end product lifecycle, ensuring a seamless user experience.",
-        "Conducted user research and developed marketing strategies to improve product adoption."
+        "Launched an AI-powered SaaS product that automates visual content creation for businesses.",
+        "Built and led a cross-functional team of engineers, designers, and ML specialists.",
+        "Secured early-stage funding through angel investors and pitch competitions.",
+        "Developed the company's AI roadmap and technology stack architecture.",
+        "Implemented growth strategies resulting in a 200% increase in user acquisition."
       ]
     },
     {
-      role: "Web Developer Intern",
+      role: "AI Solutions Developer",
       company: "Bharat Intern",
       period: "2023",
-      description: "Worked on developing responsive web applications and enhancing user interfaces.",
+      description: "Led development of AI-powered applications and cognitive solutions for enterprise clients.",
       icon: <Code className="h-10 w-10 text-primary p-2 bg-accent rounded-full" />,
       responsibilities: [
-        "Developed responsive and visually appealing websites using HTML, CSS, and JavaScript.",
-        "Optimized web applications for faster loading speed and SEO performance.",
-        "Assisted in backend development using Flask and Firebase.",
-        "Implemented UI/UX improvements based on user feedback and A/B testing."
+        "Built responsive AI-powered web applications using machine learning frameworks and React.",
+        "Integrated NLP capabilities to create advanced search and recommendation features.",
+        "Implemented computer vision solutions for image recognition and processing tasks.",
+        "Designed AI data pipelines and analytics dashboards for business intelligence."
       ]
     },
     {
-      role: "Product Marketing Intern",
+      role: "Startup Growth Strategist",
       company: "Vijay Products Pvt Ltd",
       period: "2022",
-      description: "Assisted in product marketing strategies and customer engagement initiatives.",
+      description: "Developed AI-enhanced marketing strategies and led digital transformation initiatives.",
       icon: <Tag className="h-10 w-10 text-primary p-2 bg-accent rounded-full" />,
       responsibilities: [
-        "Conducted market research to identify potential customers and competitive trends.",
-        "Assisted in designing and executing digital marketing strategies (social media, branding).",
-        "Created marketing materials, presentations, and email campaigns for business growth.",
-        "Analyzed marketing metrics to optimize campaigns and improve customer conversion."
+        "Designed and implemented AI-driven market research to identify emerging opportunities.",
+        "Created data-backed marketing strategies leveraging predictive analytics and consumer behavior modeling.",
+        "Deployed AI tools for customer segmentation and personalized marketing campaigns.",
+        "Established metrics frameworks to track business growth and optimize conversion rates."
       ]
     },
     {
-      role: "Outlier Intern - Entrepreneurship Program",
-      company: "Outlier",
+      role: "AI Venture Fellow",
+      company: "Outlier Accelerator",
       period: "2021",
-      description: "Participated in an entrepreneurship-focused program learning startup methodologies.",
+      description: "Selected for an elite entrepreneurship program focused on AI venture development.",
       icon: <Lightbulb className="h-10 w-10 text-primary p-2 bg-accent rounded-full" />,
       responsibilities: [
-        "Conducted case studies on successful startups & participated in ideation sessions.",
-        "Developed a business plan and pitch for a novel product idea.",
-        "Worked on real-world business problems, applying analytical thinking and problem-solving skills.",
-        "Learned venture capital fundamentals and investment strategy for early-stage startups."
+        "Developed business models for AI-powered startups with guidance from industry mentors.",
+        "Created and pitched an AI venture concept to a panel of venture capitalists and tech leaders.",
+        "Collaborated with ML engineers to prototype AI solutions for real-world business challenges.",
+        "Studied AI startup funding landscapes and investment strategies for deep tech ventures."
       ]
     },
   ];
@@ -61,7 +61,7 @@ const Experience = () => {
   return (
     <section id="experience">
       <div className="section-container">
-        <h2 className="section-title">Professional & Entrepreneurial Experience</h2>
+        <h2 className="section-title">Entrepreneurial Journey & AI Ventures</h2>
         <div className="relative">
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -ml-0.5 md:ml-0"></div>
