@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>Vikas - Entrepreneur & Startup Expert | Personal Portfolio</title>
     
     <!-- Primary Meta Tags -->
@@ -35,6 +39,21 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vikas-portfolio.onrender.com/" />
+
+    <!-- Mobile-specific styles -->
+    <style>
+      @media (max-width: 768px) {
+        body {
+          -webkit-text-size-adjust: 100%;
+          -webkit-tap-highlight-color: transparent;
+        }
+        #root {
+          min-height: 100vh;
+          width: 100%;
+          overflow-x: hidden;
+        }
+      }
+    </style>
   </head>
 
   <body>

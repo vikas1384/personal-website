@@ -1,0 +1,159 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* General styles */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* Container adjustments */
+  .container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  /* Navigation */
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  /* Hero section */
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Projects section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    margin: 0;
+  }
+
+  /* About section */
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Contact section */
+  .contact-form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  /* Animations */
+  .fade-in {
+    animation: none;
+    opacity: 1;
+  }
+
+  /* Touch interactions */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better touch targets */
+  button, 
+  .button,
+  .nav-link,
+  .social-link {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+}
+
+/* Landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .nav-links {
+    padding: 1rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .about-content {
+    gap: 1rem;
+  }
+} 
