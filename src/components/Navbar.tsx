@@ -51,7 +51,7 @@ const Navbar = () => {
             Vikas<span className="text-primary">.</span>
           </a>
           <span className="text-xs text-muted-foreground hidden md:block">
-            AI-driven Startup Founder, Tech Entrepreneur & Innovator
+            A Sportsman, a leader and a passionate passionate entrepreneur
           </span>
         </div>
 
@@ -113,7 +113,7 @@ const Navbar = () => {
               Vikas<span className="text-primary">.</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              AI-driven Startup Founder, Tech Entrepreneur & Innovator
+              A Sportsman, a leader and a passionate passionate entrepreneur
             </div>
           </div>
           {navLinks.map((link) => (
