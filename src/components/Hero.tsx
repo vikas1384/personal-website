@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import ProfileCarousel from "./ProfileCarousel";
 import { Button } from "./ui/button";
@@ -14,10 +13,10 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_60%_30%,hsl(var(--primary)/0.1),transparent_40%)]"></div>
-      <div className="section-container py-16 md:py-20 flex flex-col justify-center">
+      <div className="section-container py-8 md:py-12 flex flex-col justify-center">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1 animate-fade-in">
             <div className="inline-block bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-sm font-medium mb-6">
